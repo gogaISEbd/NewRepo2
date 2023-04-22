@@ -43,7 +43,7 @@ namespace HostelProduct
 
                 if (view.Role == "Бухгалтер")
                 {
-                    var form = Container.Resolve<FormBuh>();
+                    var form = Program.Container.Resolve<FormBuh>();
                     form.idUser = view.Id;
                     form.fio = view.Fio;
                     form.ShowDialog();

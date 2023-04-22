@@ -85,6 +85,19 @@ namespace Controllers
             context.Staff.Add(element);
             context.SaveChanges();
         }
+        public void DelElement(int id)
+        {
+            Staff element = context.Staff.FirstOrDefault(rec => rec.Id == id);
+            if (element != null)
+            {
+                context.Staff.Remove(element);
+                context.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("Объект не найден");
+            }
+        }
     }
 
 }
