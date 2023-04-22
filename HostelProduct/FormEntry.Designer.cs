@@ -89,6 +89,7 @@
             this.Controls.Add(this.labelLogin);
             this.Name = "FormEntry";
             this.Text = "Entry";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
