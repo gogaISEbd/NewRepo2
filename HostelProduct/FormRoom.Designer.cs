@@ -95,45 +95,45 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(597, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.Size = new System.Drawing.Size(107, 20);
             this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
+            this.label1.Text = "Наменование";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(597, 119);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 20);
+            this.label2.Size = new System.Drawing.Size(45, 20);
             this.label2.TabIndex = 7;
-            this.label2.Text = "label2";
+            this.label2.Text = "Цена";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(597, 152);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 20);
+            this.label3.Size = new System.Drawing.Size(112, 20);
             this.label3.TabIndex = 8;
-            this.label3.Text = "label3";
+            this.label3.Text = "Расположение";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(597, 185);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 20);
+            this.label4.Size = new System.Drawing.Size(114, 20);
             this.label4.TabIndex = 9;
-            this.label4.Text = "label4";
+            this.label4.Text = "Кол-во Комнат";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(597, 222);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 20);
+            this.label5.Size = new System.Drawing.Size(73, 20);
             this.label5.TabIndex = 10;
-            this.label5.Text = "label5";
+            this.label5.Text = "Площадь";
             // 
             // button1
             // 
@@ -141,8 +141,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 11;
-            this.button1.Text = "button1";
+            this.button1.Text = "Добавление";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // button2
             // 
@@ -150,8 +151,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 29);
             this.button2.TabIndex = 12;
-            this.button2.Text = "button2";
+            this.button2.Text = "Редактирование";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // button3
             // 
@@ -159,8 +161,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 29);
             this.button3.TabIndex = 13;
-            this.button3.Text = "button3";
+            this.button3.Text = "Удаление";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // FormRoom
             // 

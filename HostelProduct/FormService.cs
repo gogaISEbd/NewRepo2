@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Unity;
+using Controllers;
+using Models.Model;
 
 namespace HostelProduct
 {
@@ -34,7 +36,7 @@ namespace HostelProduct
         {
             try
             {
-                List<Service> list = service.GetList();
+                List<AdditionalService> list = service.GetList();
                 if (list != null)
                 {
                     dataGridView1.DataSource = list;
@@ -65,10 +67,10 @@ namespace HostelProduct
             }
             try
             {
-                service.AddElement(new Service
+                service.AddElement(new AdditionalService
                 {
-                    NameService = textBoxNameService.Text,
-                    CostService = Convert.ToDouble(textBoxCost.Text)
+                    Name = textBoxNameService.Text,
+                    Price = Convert.ToDecimal(textBoxCost.Text)
                 });
                 MessageBox.Show("Услуга успешно добавлена!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -93,11 +95,11 @@ namespace HostelProduct
             }
             try
             {
-                service.UpdElement(new Service
+                service.UpdElement(new AdditionalService
                 {
                     Id = id,
-                    NameService = textBoxNameService.Text,
-                    CostService = Convert.ToDouble(textBoxCost.Text)
+                    Name = textBoxNameService.Text,
+                    Price = Convert.ToDecimal(textBoxCost.Text)
                 });
                 MessageBox.Show("Услуга успешно отредактирована!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -136,9 +138,9 @@ namespace HostelProduct
             {
                 try
                 {
-                    Service view = service.GetElementService(id);
-                    textBoxCost.Text = Convert.ToString(view.CostService);
-                    textBoxNameService.Text = view.NameService;
+                    AdditionalService view = service.GetElement(id);
+                    textBoxCost.Text = Convert.ToString(view.Price);
+                    textBoxNameService.Text = view.Name;
                 }
                 catch (Exception ex)
                 {

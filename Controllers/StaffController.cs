@@ -85,6 +85,24 @@ namespace Controllers
             context.Staff.Add(element);
             context.SaveChanges();
         }
+        public void UpdElement(Staff model)
+        {
+            Staff element = context.Staff.FirstOrDefault(rec => rec.Id != model.Id);
+            if (element != null)
+            {
+                throw new Exception("Такая квартира в доме уже существует");
+            }
+            element = context.Staff.FirstOrDefault(rec => rec.Id == model.Id);
+            if (element == null)
+            {
+                throw new Exception("Объект не найден");
+            }
+            element.Fio = model.Fio;
+            element.Login = model.Login;
+            element.Role = model.Role;
+            element.Password= model.Password;
+            context.SaveChanges();
+        }
         public void DelElement(int id)
         {
             Staff element = context.Staff.FirstOrDefault(rec => rec.Id == id);
