@@ -126,6 +126,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormService";
             this.Text = "FormService";
+            this.Load += new System.EventHandler(this.FormService_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

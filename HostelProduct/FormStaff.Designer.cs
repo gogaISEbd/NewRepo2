@@ -28,154 +28,160 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxFIO = new System.Windows.Forms.TextBox();
-            this.textBoxLogin = new System.Windows.Forms.TextBox();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.comboBoxRole = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            dataGridView1 = new DataGridView();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            textBoxFIO = new TextBox();
+            textBoxLogin = new TextBox();
+            textBoxPassword = new TextBox();
+            comboBoxRole = new ComboBox();
+            buttonAdd = new Button();
+            buttonChange = new Button();
+            buttonDel = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 26);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(482, 394);
-            this.dataGridView1.TabIndex = 0;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(10, 20);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(422, 296);
+            dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(518, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Фио";
+            label1.AutoSize = true;
+            label1.Location = new Point(453, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(30, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Фио";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(518, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Логин";
+            label2.AutoSize = true;
+            label2.Location = new Point(453, 50);
+            label2.Name = "label2";
+            label2.Size = new Size(41, 15);
+            label2.TabIndex = 2;
+            label2.Text = "Логин";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(518, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Пароль";
+            label3.AutoSize = true;
+            label3.Location = new Point(453, 80);
+            label3.Name = "label3";
+            label3.Size = new Size(49, 15);
+            label3.TabIndex = 3;
+            label3.Text = "Пароль";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(518, 158);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Роль";
+            label4.AutoSize = true;
+            label4.Location = new Point(453, 118);
+            label4.Name = "label4";
+            label4.Size = new Size(34, 15);
+            label4.TabIndex = 4;
+            label4.Text = "Роль";
             // 
             // textBoxFIO
             // 
-            this.textBoxFIO.Location = new System.Drawing.Point(629, 23);
-            this.textBoxFIO.Name = "textBoxFIO";
-            this.textBoxFIO.Size = new System.Drawing.Size(125, 27);
-            this.textBoxFIO.TabIndex = 5;
+            textBoxFIO.Location = new Point(550, 17);
+            textBoxFIO.Margin = new Padding(3, 2, 3, 2);
+            textBoxFIO.Name = "textBoxFIO";
+            textBoxFIO.Size = new Size(110, 23);
+            textBoxFIO.TabIndex = 5;
             // 
             // textBoxLogin
             // 
-            this.textBoxLogin.Location = new System.Drawing.Point(629, 64);
-            this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(125, 27);
-            this.textBoxLogin.TabIndex = 6;
+            textBoxLogin.Location = new Point(550, 48);
+            textBoxLogin.Margin = new Padding(3, 2, 3, 2);
+            textBoxLogin.Name = "textBoxLogin";
+            textBoxLogin.Size = new Size(110, 23);
+            textBoxLogin.TabIndex = 6;
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(629, 107);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(125, 27);
-            this.textBoxPassword.TabIndex = 7;
+            textBoxPassword.Location = new Point(550, 80);
+            textBoxPassword.Margin = new Padding(3, 2, 3, 2);
+            textBoxPassword.Name = "textBoxPassword";
+            textBoxPassword.Size = new Size(110, 23);
+            textBoxPassword.TabIndex = 7;
             // 
             // comboBoxRole
             // 
-            this.comboBoxRole.FormattingEnabled = true;
-            this.comboBoxRole.Items.AddRange(new object[] {
-            "Бухгалтер",
-            "Консьерж"});
-            this.comboBoxRole.Location = new System.Drawing.Point(603, 150);
-            this.comboBoxRole.Name = "comboBoxRole";
-            this.comboBoxRole.Size = new System.Drawing.Size(151, 28);
-            this.comboBoxRole.TabIndex = 8;
+            comboBoxRole.FormattingEnabled = true;
+            comboBoxRole.Items.AddRange(new object[] { "Бухгалтер", "Консьерж" });
+            comboBoxRole.Location = new Point(528, 112);
+            comboBoxRole.Margin = new Padding(3, 2, 3, 2);
+            comboBoxRole.Name = "comboBoxRole";
+            comboBoxRole.Size = new Size(133, 23);
+            comboBoxRole.TabIndex = 8;
             // 
-            // button1
+            // buttonAdd
             // 
-            this.button1.Location = new System.Drawing.Point(500, 237);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.buttonAdd_Click);
+            buttonAdd.Location = new Point(438, 178);
+            buttonAdd.Margin = new Padding(3, 2, 3, 2);
+            buttonAdd.Name = "buttonAdd";
+            buttonAdd.Size = new Size(82, 22);
+            buttonAdd.TabIndex = 9;
+            buttonAdd.Text = "Добавить";
+            buttonAdd.UseVisualStyleBackColor = true;
+            buttonAdd.Click += buttonAdd_Click;
             // 
-            // button2
+            // buttonChange
             // 
-            this.button2.Location = new System.Drawing.Point(603, 237);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Изменить";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.buttonEdit_Click);
+            buttonChange.Location = new Point(528, 178);
+            buttonChange.Margin = new Padding(3, 2, 3, 2);
+            buttonChange.Name = "buttonChange";
+            buttonChange.Size = new Size(82, 22);
+            buttonChange.TabIndex = 10;
+            buttonChange.Text = "Изменить";
+            buttonChange.UseVisualStyleBackColor = true;
+            buttonChange.Click += buttonEdit_Click;
             // 
-            // button3
+            // buttonDel
             // 
-            this.button3.Location = new System.Drawing.Point(703, 237);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Удалить";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.buttonDelete_Click);
+            buttonDel.Location = new Point(615, 178);
+            buttonDel.Margin = new Padding(3, 2, 3, 2);
+            buttonDel.Name = "buttonDel";
+            buttonDel.Size = new Size(82, 22);
+            buttonDel.TabIndex = 11;
+            buttonDel.Text = "Удалить";
+            buttonDel.UseVisualStyleBackColor = true;
+            buttonDel.Click += buttonDelete_Click;
             // 
             // FormStaff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBoxRole);
-            this.Controls.Add(this.textBoxPassword);
-            this.Controls.Add(this.textBoxLogin);
-            this.Controls.Add(this.textBoxFIO);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "FormStaff";
-            this.Text = "FormStaff";
-            this.Load += new System.EventHandler(this.FormStaff_Load);
-            this.Click += new System.EventHandler(this.buttonDelete_Click);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(700, 338);
+            Controls.Add(buttonDel);
+            Controls.Add(buttonChange);
+            Controls.Add(buttonAdd);
+            Controls.Add(comboBoxRole);
+            Controls.Add(textBoxPassword);
+            Controls.Add(textBoxLogin);
+            Controls.Add(textBoxFIO);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(dataGridView1);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "FormStaff";
+            Text = "FormStaff";
+            Load += FormStaff_Load;
+            Click += buttonDelete_Click;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -189,8 +195,8 @@
         private TextBox textBoxLogin;
         private TextBox textBoxPassword;
         private ComboBox comboBoxRole;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button buttonAdd;
+        private Button buttonChange;
+        private Button buttonDel;
     }
 }

@@ -51,7 +51,7 @@ namespace Controllers
             {
                 throw new Exception("Такая квартира уже существует");
             }
-            context.Rooms.Add(new Room
+            context.AdditionalServices.Add(new AdditionalService
             {
                 Name = model.Name,
                 Price = model.Price,

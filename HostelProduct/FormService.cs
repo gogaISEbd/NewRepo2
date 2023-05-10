@@ -44,6 +44,7 @@ namespace HostelProduct
                     dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                     dataGridView1.Columns[1].HeaderText = "Название услуги";
                     dataGridView1.Columns[2].HeaderText = "Стоимость услуги";
+                    dataGridView1.Columns[3].Visible = false;
                 }
             }
             catch (Exception ex)

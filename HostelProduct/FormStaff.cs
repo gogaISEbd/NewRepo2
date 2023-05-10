@@ -1,7 +1,6 @@
 ﻿using Controllers;
 using Models.Model;
 using Unity;
-using Controllers;
 
 namespace HostelProduct
 {
@@ -33,9 +32,12 @@ namespace HostelProduct
                 {
                     dataGridView1.DataSource = list;
                     dataGridView1.Columns[0].Visible = false;
-                    dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                    dataGridView1.Columns[1].HeaderText = "Название услуги";
-                    dataGridView1.Columns[2].HeaderText = "Стоимость услуги";
+                    dataGridView1.Columns[1].HeaderText = "Фио";
+                    dataGridView1.Columns[2].HeaderText = "Логин";
+                    dataGridView1.Columns[3].HeaderText = "Пароль";
+                    dataGridView1.Columns[4].HeaderText = "Роль";
+                    dataGridView1.Columns[5].Visible = false;
+
                 }
             }
             catch (Exception ex)
@@ -74,7 +76,7 @@ namespace HostelProduct
                     Fio = textBoxFIO.Text,
                     Login = textBoxLogin.Text,
                     Password = textBoxPassword.Text,
-                    Role=comboBoxRole.Text
+                    Role = comboBoxRole.Text
                 });
                 MessageBox.Show("Услуга успешно добавлена!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -115,7 +117,7 @@ namespace HostelProduct
                     Fio = textBoxFIO.Text,
                     Login = textBoxLogin.Text,
                     Password = textBoxPassword.Text,
-                    Role=comboBoxRole.Text
+                    Role = comboBoxRole.Text
                 });
                 MessageBox.Show("Услуга успешно отредактирована!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

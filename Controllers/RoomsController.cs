@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Models.Model;
-using Models;
 
 namespace Controllers
 {
@@ -20,14 +19,17 @@ namespace Controllers
         }
         public List<Room> GetList()
         {
+            
             List<Room> result = context.Rooms.AsEnumerable().Select(rec => new Room
             {
                 Id = rec.Id,
                 Name = rec.Name,
                 Price = rec.Price,
-                Size = rec.Size,
-                Location= rec.Location,
-                Rooms= rec.Rooms
+                Location = rec.Location,
+                Rooms = rec.Rooms,
+                Size = rec.Size
+               
+                
             })
            .ToList();
             return result;
@@ -42,9 +44,9 @@ namespace Controllers
                     Id = element.Id,
                     Name = element.Name,
                     Price = element.Price,
-                    Size = element.Size,
                     Location = element.Location,
-                    Rooms = element.Rooms
+                    Rooms = element.Rooms,
+                    Size = element.Size,
                 };
             }
             throw new Exception("Объект не найден");
@@ -62,9 +64,9 @@ namespace Controllers
             {
                 Name = model.Name,
                 Price = model.Price,
-                Size = model.Size,
                 Location = model.Location,
-                Rooms = model.Rooms
+                Rooms = model.Rooms,
+                Size = model.Size
             });
             context.SaveChanges();
         }
@@ -83,9 +85,10 @@ namespace Controllers
             }
             element.Name = model.Name;
             element.Price = model.Price;
-            element.Size = model.Size;
+            
             element.Location = model.Location;
             element.Rooms = model.Rooms;
+            element.Size = model.Size;
             context.SaveChanges();
         }
 

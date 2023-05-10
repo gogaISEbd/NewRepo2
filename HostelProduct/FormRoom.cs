@@ -27,7 +27,7 @@ namespace HostelProduct
             this.rooms = rooms;
         }
 
-        private void FormService_Load(object sender, EventArgs e)
+        private void FormRoom_Load(object sender, EventArgs e)
         {
             LoadData();
         }
@@ -41,12 +41,12 @@ namespace HostelProduct
                 {
                     dataGridView1.DataSource = list;
                     dataGridView1.Columns[0].Visible = false;
-                    dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                     dataGridView1.Columns[1].HeaderText = "Название комнаты";
-                    dataGridView1.Columns[3].HeaderText = "Стоимость ";
+                    dataGridView1.Columns[2].HeaderText = "Стоимость ";
+                    dataGridView1.Columns[3].HeaderText = "Площадь";
                     dataGridView1.Columns[4].HeaderText = "Расположение";
-                    dataGridView1.Columns[5].HeaderText = "Кол комнат";
-                    dataGridView1.Columns[6].HeaderText = "Площадь комнаты";
+                    dataGridView1.Columns[5].HeaderText = "Колличество комнат";
+                    dataGridView1.Columns[6].Visible = false;
                 }
             }
             catch (Exception ex)
@@ -187,5 +187,7 @@ namespace HostelProduct
                 }
             }
         }
+
+       
     }
 }
