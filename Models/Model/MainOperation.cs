@@ -18,6 +18,7 @@ public partial class MainOperation
     public int? ClientId { get; set; }
 
     public int? RoomsId { get; set; }
+    public bool? Condit { get; set; }
 
     public virtual Client? Client { get; set; }
 
