@@ -14,6 +14,7 @@ public partial class MainOperation
     public DateOnly? DateEnd { get; set; }
 
     public decimal? Cost { get; set; }
+    public decimal? Payed { get; set; }
 
     public int? ClientId { get; set; }
 

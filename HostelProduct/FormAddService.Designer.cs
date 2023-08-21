@@ -1,6 +1,6 @@
 ﻿namespace HostelProduct
 {
-    partial class FormPay
+    partial class FormAddService
     {
         /// <summary>
         /// Required designer variable.
@@ -29,77 +29,77 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            buttonPay = new Button();
-            labelText = new Label();
-            textBoxDate = new TextBox();
             label1 = new Label();
-            textBoxCost = new TextBox();
+            label2 = new Label();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            buttonPay = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 12);
+            dataGridView1.Location = new Point(35, 56);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(644, 401);
+            dataGridView1.Size = new Size(527, 364);
             dataGridView1.TabIndex = 0;
-            // 
-            // buttonPay
-            // 
-            buttonPay.Location = new Point(669, 118);
-            buttonPay.Name = "buttonPay";
-            buttonPay.Size = new Size(75, 23);
-            buttonPay.TabIndex = 1;
-            buttonPay.Text = "Оплатить";
-            buttonPay.UseVisualStyleBackColor = true;
-            // 
-            // labelText
-            // 
-            labelText.AutoSize = true;
-            labelText.Location = new Point(669, 27);
-            labelText.Name = "labelText";
-            labelText.Size = new Size(32, 15);
-            labelText.TabIndex = 2;
-            labelText.Text = "Дата";
-            // 
-            // textBoxDate
-            // 
-            textBoxDate.Location = new Point(718, 28);
-            textBoxDate.Name = "textBoxDate";
-            textBoxDate.Size = new Size(70, 23);
-            textBoxDate.TabIndex = 3;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(669, 73);
+            label1.Location = new Point(592, 59);
             label1.Name = "label1";
-            label1.Size = new Size(47, 15);
-            label1.TabIndex = 4;
-            label1.Text = "Оплата";
+            label1.Size = new Size(32, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Дата";
             // 
-            // textBoxCost
+            // label2
             // 
-            textBoxCost.Location = new Point(713, 70);
-            textBoxCost.Name = "textBoxCost";
-            textBoxCost.Size = new Size(85, 23);
-            textBoxCost.TabIndex = 5;
+            label2.AutoSize = true;
+            label2.Location = new Point(595, 90);
+            label2.Name = "label2";
+            label2.Size = new Size(35, 15);
+            label2.TabIndex = 2;
+            label2.Text = "Цена";
             // 
-            // FormPay
+            // textBox1
+            // 
+            textBox1.Location = new Point(688, 51);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 3;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(688, 87);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(100, 23);
+            textBox2.TabIndex = 4;
+            // 
+            // buttonPay
+            // 
+            buttonPay.Location = new Point(608, 137);
+            buttonPay.Name = "buttonPay";
+            buttonPay.Size = new Size(75, 23);
+            buttonPay.TabIndex = 5;
+            buttonPay.Text = "Оплатить";
+            buttonPay.UseVisualStyleBackColor = true;
+            // 
+            // FormAddService
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBoxCost);
-            Controls.Add(label1);
-            Controls.Add(textBoxDate);
-            Controls.Add(labelText);
             Controls.Add(buttonPay);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(dataGridView1);
-            Name = "FormPay";
-            Text = "FormPay";
+            Name = "FormAddService";
+            Text = "FormAddService";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -108,10 +108,10 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private Button buttonPay;
-        private Label labelText;
-        private TextBox textBoxDate;
         private Label label1;
-        private TextBox textBoxCost;
+        private Label label2;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private Button buttonPay;
     }
 }

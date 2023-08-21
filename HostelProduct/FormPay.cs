@@ -42,9 +42,14 @@ namespace HostelProduct
                     dataGridView1.DataSource = list;
                     dataGridView1.Columns[0].Visible = false;
                     dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                    dataGridView1.Columns[1].HeaderText = "Название услуги";
-                    dataGridView1.Columns[2].HeaderText = "Стоимость услуги";
-                    dataGridView1.Columns[3].Visible = false;
+                    dataGridView1.Columns[1].HeaderText = "Дата";
+                    dataGridView1.Columns[2].HeaderText = "Дата Заезда";
+                    dataGridView1.Columns[3].HeaderText = "Дата Выезда";
+                    dataGridView1.Columns[4].HeaderText = "Цена";
+                    dataGridView1.Columns[5].HeaderText = "Клиент";
+                    dataGridView1.Columns[6].HeaderText = "Номер";
+                    dataGridView1.Columns[7].HeaderText = "Состояние";
+                    dataGridView1.Columns[8].Visible = false;
                 }
             }
             catch (Exception ex)
@@ -62,25 +67,30 @@ namespace HostelProduct
                 MessageBox.Show("Заполните дату!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if (string.IsNullOrEmpty(textBoxCost.Text))
+            {
+                MessageBox.Show("Цену!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
 
             try
             {
                 service.UpdPay(new MainOperation
                 {
                     Id = id,
+                    Cost=Convert.ToInt32(textBoxCost.Text)
                 });
                 MessageBox.Show("Услуга успешно олачена", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            } 
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Введите корректные значения", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-    LoadData();
-}
-
-        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-
+            LoadData();
         }
+
+
+
     }
 }
