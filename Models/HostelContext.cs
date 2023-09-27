@@ -5,7 +5,7 @@ namespace Models
 {
     public class HostelContext : DbContext
     {
-        public string CONNECTION_STRING { get { return "Host=localhost;Port=5432;Database=Hostel;Username=postgres;Password=123"; } }
+        public string CONNECTION_STRING { get { return "Host=localhost;Port=5432;Database=Hostel;Username=postgres;Password=111"; } }
         public DbSet<AccountPlan> AccountPlans { get; set; } 
 
         public DbSet<AdditionalOperation> AdditionalOperations { get; set; }

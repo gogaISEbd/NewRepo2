@@ -32,6 +32,20 @@ namespace Controllers
            .ToList();
             return result;
         }
+
+        public List<Task> GetListAll()
+        {
+            List<Task> result = context.Tasks.AsEnumerable().Select(rec => new Task
+            {
+                Id = rec.Id,
+                Date = rec.Date,
+                StaffId = rec.StaffId,
+                Task1 = rec.Task1,
+                IsDone = rec.IsDone
+            }) 
+           .ToList();
+            return result;
+        }
         public Task GetElement(int id)
         {
             Task element = context.Tasks.FirstOrDefault(rec => rec.Id == id);
