@@ -27,7 +27,7 @@ namespace Controllers
                 Task1 = rec.Task1,
                 Date = rec.Date,
                 IsDone = rec.IsDone,
-                Staff = rec.Staff
+                StaffId = rec.StaffId
             }).Where(rec => rec.StaffId == idUser)
            .ToList();
             return result;
@@ -114,6 +114,19 @@ namespace Controllers
             if (element != null)
             {
                 context.Tasks.Remove(element);
+                context.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("Объект не найден");
+            }
+        }
+        public void ConfElement(int id)
+        {
+            Task element = context.Tasks.FirstOrDefault(rec => rec.Id == id);
+            if (element != null)
+            {
+                element.IsDone = true;
                 context.SaveChanges();
             }
             else
