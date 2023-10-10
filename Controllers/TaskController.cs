@@ -28,7 +28,7 @@ namespace Controllers
                 Date = rec.Date,
                 IsDone = rec.IsDone,
                 StaffId = rec.StaffId
-            }).Where(rec => rec.StaffId == idUser)
+            }).Where(rec => rec.StaffId == idUser && rec.IsDone == false)
            .ToList();
             return result;
         }

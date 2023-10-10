@@ -21,16 +21,29 @@ namespace HostelProduct
 
         private int id;
         private readonly TaskController task;
+        private readonly StaffController staff;
 
-        public FormTasks(TaskController task)
+        public FormTasks(TaskController task, StaffController staff)
         {
             InitializeComponent();
             this.task = task;
+            this.staff = staff;
         }
 
         private void FormRoom_Load(object sender, EventArgs e)
         {
             LoadData();
+            StaffCombo();
+        }
+
+        private void StaffCombo()
+        {
+            List<Staff> stafflost = staff.GetList();
+            comboBoxStaff.ValueMember = "id";
+            comboBoxStaff.DisplayMember = "FIO";
+            comboBoxStaff.DataSource = stafflost;
+            comboBoxStaff.SelectedIndex = -1;
+
         }
 
         private void LoadData()
@@ -76,7 +89,7 @@ namespace HostelProduct
                     Task1 = textBoxTask.Text,
                     Date = dateTimePicker.Value,
                     IsDone = false,
-                    StaffId = 2
+                    StaffId = Convert.ToInt32(comboBoxStaff.SelectedValue)  
                 });
                 MessageBox.Show("Услуга успешно добавлена!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

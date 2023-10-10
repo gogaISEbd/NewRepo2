@@ -58,27 +58,27 @@ namespace HostelProduct
             }
         }
 
-        private void ConfirmTask_Click()
+
+
+        private void button4_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count == 1)
             {
-                
-                    id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
-                    try
-                    {
-                        task.ConfElement(id);
-                        MessageBox.Show("Услуга успешно удалена!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    LoadData();
+
+                id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+                try
+                {
+                    task.ConfElement(id);
+                    MessageBox.Show("Поручение выполнено!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                LoadData();
             }
 
-
         }
-
     }
+
 }

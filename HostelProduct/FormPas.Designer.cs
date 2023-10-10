@@ -39,24 +39,24 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(288, 27);
+            dataGridView1.Location = new Point(114, 12);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(500, 223);
+            dataGridView1.Size = new Size(555, 223);
             dataGridView1.TabIndex = 0;
             // 
             // button1
             // 
-            button1.Location = new Point(23, 47);
+            button1.Location = new Point(12, 12);
             button1.Name = "button1";
-            button1.Size = new Size(96, 23);
+            button1.Size = new Size(96, 32);
             button1.TabIndex = 1;
             button1.Text = "Клиенты компании";
             button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            button2.Location = new Point(21, 76);
+            button2.Location = new Point(10, 50);
             button2.Name = "button2";
             button2.Size = new Size(98, 43);
             button2.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(23, 125);
+            button3.Location = new Point(12, 99);
             button3.Name = "button3";
             button3.Size = new Size(96, 39);
             button3.TabIndex = 3;
@@ -74,18 +74,19 @@
             // 
             // button4
             // 
-            button4.Location = new Point(288, 271);
+            button4.Location = new Point(675, 12);
             button4.Name = "button4";
-            button4.Size = new Size(137, 43);
+            button4.Size = new Size(110, 43);
             button4.TabIndex = 4;
             button4.Text = "Подтвердить выполнение";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // FormPas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(795, 300);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -93,6 +94,7 @@
             Controls.Add(dataGridView1);
             Name = "FormPas";
             Text = "FormPas";
+            Load += FormMain_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
