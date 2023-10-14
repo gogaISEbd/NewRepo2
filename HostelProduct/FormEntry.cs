@@ -47,7 +47,7 @@ namespace HostelProduct
                     form.idUser = view.Id;
                     form.fio = view.Fio;
                     form.ShowDialog();
-                } 
+                }
                 if (view.Role == "Консьерж")
                 {
                     var form = Program.Container.Resolve<FormPas>();
@@ -61,7 +61,7 @@ namespace HostelProduct
                 }
             }
             catch (Exception ex)
-             {
+            {
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK,
                MessageBoxIcon.Error);
             }

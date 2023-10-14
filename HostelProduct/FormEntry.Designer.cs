@@ -28,71 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelLogin = new System.Windows.Forms.Label();
-            this.labelPassword = new System.Windows.Forms.Label();
-            this.textBoxLogin = new System.Windows.Forms.TextBox();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.buttonEntry = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            labelLogin = new Label();
+            labelPassword = new Label();
+            textBoxLogin = new TextBox();
+            textBoxPassword = new TextBox();
+            buttonEntry = new Button();
+            SuspendLayout();
             // 
             // labelLogin
             // 
-            this.labelLogin.AutoSize = true;
-            this.labelLogin.Location = new System.Drawing.Point(63, 35);
-            this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(46, 20);
-            this.labelLogin.TabIndex = 0;
-            this.labelLogin.Text = "Login";
+            labelLogin.AutoSize = true;
+            labelLogin.Location = new Point(55, 26);
+            labelLogin.Name = "labelLogin";
+            labelLogin.Size = new Size(37, 15);
+            labelLogin.TabIndex = 0;
+            labelLogin.Text = "Login";
             // 
             // labelPassword
             // 
-            this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(58, 71);
-            this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(70, 20);
-            this.labelPassword.TabIndex = 1;
-            this.labelPassword.Text = "Password";
+            labelPassword.AutoSize = true;
+            labelPassword.Location = new Point(51, 53);
+            labelPassword.Name = "labelPassword";
+            labelPassword.Size = new Size(57, 15);
+            labelPassword.TabIndex = 1;
+            labelPassword.Text = "Password";
             // 
             // textBoxLogin
             // 
-            this.textBoxLogin.Location = new System.Drawing.Point(138, 32);
-            this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.Size = new System.Drawing.Size(125, 27);
-            this.textBoxLogin.TabIndex = 2;
+            textBoxLogin.Location = new Point(121, 24);
+            textBoxLogin.Margin = new Padding(3, 2, 3, 2);
+            textBoxLogin.Name = "textBoxLogin";
+            textBoxLogin.Size = new Size(110, 23);
+            textBoxLogin.TabIndex = 2;
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(138, 71);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(125, 27);
-            this.textBoxPassword.TabIndex = 3;
+            textBoxPassword.Location = new Point(121, 53);
+            textBoxPassword.Margin = new Padding(3, 2, 3, 2);
+            textBoxPassword.Name = "textBoxPassword";
+            textBoxPassword.Size = new Size(110, 23);
+            textBoxPassword.TabIndex = 3;
             // 
             // buttonEntry
             // 
-            this.buttonEntry.Location = new System.Drawing.Point(139, 125);
-            this.buttonEntry.Name = "buttonEntry";
-            this.buttonEntry.Size = new System.Drawing.Size(94, 29);
-            this.buttonEntry.TabIndex = 4;
-            this.buttonEntry.Text = "Entry";
-            this.buttonEntry.UseVisualStyleBackColor = true;
-            this.buttonEntry.Click += new System.EventHandler(this.buttonEntry_Click);
+            buttonEntry.Location = new Point(122, 94);
+            buttonEntry.Margin = new Padding(3, 2, 3, 2);
+            buttonEntry.Name = "buttonEntry";
+            buttonEntry.Size = new Size(82, 22);
+            buttonEntry.TabIndex = 4;
+            buttonEntry.Text = "Entry";
+            buttonEntry.UseVisualStyleBackColor = true;
+            buttonEntry.Click += buttonEntry_Click;
             // 
             // FormEntry
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonEntry);
-            this.Controls.Add(this.textBoxPassword);
-            this.Controls.Add(this.textBoxLogin);
-            this.Controls.Add(this.labelPassword);
-            this.Controls.Add(this.labelLogin);
-            this.Name = "FormEntry";
-            this.Text = "Entry";
-            this.Load += new System.EventHandler(this.FormLogin_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(345, 160);
+            Controls.Add(buttonEntry);
+            Controls.Add(textBoxPassword);
+            Controls.Add(textBoxLogin);
+            Controls.Add(labelPassword);
+            Controls.Add(labelLogin);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "FormEntry";
+            Text = "Entry";
+            Load += FormLogin_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

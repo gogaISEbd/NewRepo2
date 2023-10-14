@@ -28,169 +28,179 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBoxNameRoom = new System.Windows.Forms.TextBox();
-            this.textBoxCost = new System.Windows.Forms.TextBox();
-            this.textBoxLocation = new System.Windows.Forms.TextBox();
-            this.textBoxRooms = new System.Windows.Forms.TextBox();
-            this.textBoxSize = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            dataGridView1 = new DataGridView();
+            textBoxNameRoom = new TextBox();
+            textBoxCost = new TextBox();
+            textBoxLocation = new TextBox();
+            textBoxRooms = new TextBox();
+            textBoxSize = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(579, 381);
-            this.dataGridView1.TabIndex = 0;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(10, 36);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(507, 286);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
             // 
             // textBoxNameRoom
             // 
-            this.textBoxNameRoom.Location = new System.Drawing.Point(730, 79);
-            this.textBoxNameRoom.Name = "textBoxNameRoom";
-            this.textBoxNameRoom.Size = new System.Drawing.Size(125, 27);
-            this.textBoxNameRoom.TabIndex = 1;
+            textBoxNameRoom.Location = new Point(639, 59);
+            textBoxNameRoom.Margin = new Padding(3, 2, 3, 2);
+            textBoxNameRoom.Name = "textBoxNameRoom";
+            textBoxNameRoom.Size = new Size(110, 23);
+            textBoxNameRoom.TabIndex = 1;
             // 
             // textBoxCost
             // 
-            this.textBoxCost.Location = new System.Drawing.Point(730, 112);
-            this.textBoxCost.Name = "textBoxCost";
-            this.textBoxCost.Size = new System.Drawing.Size(125, 27);
-            this.textBoxCost.TabIndex = 2;
+            textBoxCost.Location = new Point(639, 84);
+            textBoxCost.Margin = new Padding(3, 2, 3, 2);
+            textBoxCost.Name = "textBoxCost";
+            textBoxCost.Size = new Size(110, 23);
+            textBoxCost.TabIndex = 2;
             // 
             // textBoxLocation
             // 
-            this.textBoxLocation.Location = new System.Drawing.Point(730, 145);
-            this.textBoxLocation.Name = "textBoxLocation";
-            this.textBoxLocation.Size = new System.Drawing.Size(125, 27);
-            this.textBoxLocation.TabIndex = 3;
+            textBoxLocation.Location = new Point(639, 109);
+            textBoxLocation.Margin = new Padding(3, 2, 3, 2);
+            textBoxLocation.Name = "textBoxLocation";
+            textBoxLocation.Size = new Size(110, 23);
+            textBoxLocation.TabIndex = 3;
             // 
             // textBoxRooms
             // 
-            this.textBoxRooms.Location = new System.Drawing.Point(730, 178);
-            this.textBoxRooms.Name = "textBoxRooms";
-            this.textBoxRooms.Size = new System.Drawing.Size(125, 27);
-            this.textBoxRooms.TabIndex = 4;
+            textBoxRooms.Location = new Point(639, 134);
+            textBoxRooms.Margin = new Padding(3, 2, 3, 2);
+            textBoxRooms.Name = "textBoxRooms";
+            textBoxRooms.Size = new Size(110, 23);
+            textBoxRooms.TabIndex = 4;
             // 
             // textBoxSize
             // 
-            this.textBoxSize.Location = new System.Drawing.Point(730, 215);
-            this.textBoxSize.Name = "textBoxSize";
-            this.textBoxSize.Size = new System.Drawing.Size(125, 27);
-            this.textBoxSize.TabIndex = 5;
+            textBoxSize.Location = new Point(639, 161);
+            textBoxSize.Margin = new Padding(3, 2, 3, 2);
+            textBoxSize.Name = "textBoxSize";
+            textBoxSize.Size = new Size(110, 23);
+            textBoxSize.TabIndex = 5;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(597, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Наменование";
+            label1.AutoSize = true;
+            label1.Location = new Point(522, 59);
+            label1.Name = "label1";
+            label1.Size = new Size(83, 15);
+            label1.TabIndex = 6;
+            label1.Text = "Наменование";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(597, 119);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 20);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Цена";
+            label2.AutoSize = true;
+            label2.Location = new Point(522, 89);
+            label2.Name = "label2";
+            label2.Size = new Size(35, 15);
+            label2.TabIndex = 7;
+            label2.Text = "Цена";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(597, 152);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 20);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Расположение";
+            label3.AutoSize = true;
+            label3.Location = new Point(522, 114);
+            label3.Name = "label3";
+            label3.Size = new Size(89, 15);
+            label3.TabIndex = 8;
+            label3.Text = "Расположение";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(597, 185);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 20);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Кол-во Комнат";
+            label4.AutoSize = true;
+            label4.Location = new Point(522, 139);
+            label4.Name = "label4";
+            label4.Size = new Size(90, 15);
+            label4.TabIndex = 9;
+            label4.Text = "Кол-во Комнат";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(597, 222);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 20);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Площадь";
+            label5.AutoSize = true;
+            label5.Location = new Point(522, 166);
+            label5.Name = "label5";
+            label5.Size = new Size(59, 15);
+            label5.TabIndex = 10;
+            label5.Text = "Площадь";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(646, 285);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Добавление";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.buttonAdd_Click);
+            button1.Location = new Point(565, 214);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(82, 22);
+            button1.TabIndex = 11;
+            button1.Text = "Добавление";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += buttonAdd_Click;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(761, 285);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 29);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Редактирование";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.buttonEdit_Click);
+            button2.Location = new Point(666, 214);
+            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(82, 22);
+            button2.TabIndex = 12;
+            button2.Text = "Редактирование";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += buttonEdit_Click;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(708, 340);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 29);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Удаление";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.buttonDelete_Click);
+            button3.Location = new Point(620, 255);
+            button3.Margin = new Padding(3, 2, 3, 2);
+            button3.Name = "button3";
+            button3.Size = new Size(82, 22);
+            button3.TabIndex = 13;
+            button3.Text = "Удаление";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += buttonDelete_Click;
             // 
             // FormRoom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 489);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxSize);
-            this.Controls.Add(this.textBoxRooms);
-            this.Controls.Add(this.textBoxLocation);
-            this.Controls.Add(this.textBoxCost);
-            this.Controls.Add(this.textBoxNameRoom);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "FormRoom";
-            this.Text = "FormRoom";
-            this.Load += new System.EventHandler(this.FormRoom_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(759, 367);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(textBoxSize);
+            Controls.Add(textBoxRooms);
+            Controls.Add(textBoxLocation);
+            Controls.Add(textBoxCost);
+            Controls.Add(textBoxNameRoom);
+            Controls.Add(dataGridView1);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "FormRoom";
+            Text = "FormRoom";
+            Load += FormRoom_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

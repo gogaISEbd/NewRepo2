@@ -89,9 +89,9 @@ namespace HostelProduct
                 {
                     Name = textBoxNameRoom.Text,
                     Price = Convert.ToDecimal(textBoxCost.Text),
-                    Location=textBoxLocation.Text,
-                    Rooms=Convert.ToInt32(textBoxRooms.Text),
-                    Size=Convert.ToDecimal(textBoxSize.Text)
+                    Location = textBoxLocation.Text,
+                    Rooms = Convert.ToInt32(textBoxRooms.Text),
+                    Size = Convert.ToDecimal(textBoxSize.Text)
                 });
                 MessageBox.Show("Услуга успешно добавлена!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -177,9 +177,12 @@ namespace HostelProduct
             {
                 try
                 {
-                   Room view = rooms.GetElement(id);
+                    Room view = rooms.GetElement(id);
                     textBoxCost.Text = Convert.ToString(view.Price);
-                     textBoxNameRoom.Text = view.Name;
+                    textBoxNameRoom.Text = view.Name;
+                    textBoxLocation.Text = view.Location;
+                    textBoxRooms.Text = Convert.ToString(view.Rooms);
+                    textBoxSize.Text = Convert.ToString(view.Size); 
                 }
                 catch (Exception ex)
                 {
@@ -188,6 +191,6 @@ namespace HostelProduct
             }
         }
 
-       
+
     }
 }
