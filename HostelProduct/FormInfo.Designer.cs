@@ -28,18 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            textBox1 = new TextBox();
             SuspendLayout();
+            // 
+            // textBox1
+            // 
+            textBox1.Enabled = false;
+            textBox1.Location = new Point(12, 27);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(703, 263);
+            textBox1.TabIndex = 0;
             // 
             // FormInfo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(698, 257);
+            ClientSize = new Size(748, 317);
+            Controls.Add(textBox1);
             Name = "FormInfo";
             Text = "FormInfo";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox textBox1;
     }
 }

@@ -87,12 +87,7 @@ namespace Controllers
         }
         public void UpdElement(Staff model)
         {
-            Staff element = context.Staff.FirstOrDefault(rec => rec.Id != model.Id);
-            if (element != null)
-            {
-                throw new Exception("Такая квартира в доме уже существует");
-            }
-            element = context.Staff.FirstOrDefault(rec => rec.Id == model.Id);
+            Staff element = context.Staff.FirstOrDefault(rec => rec.Id == model.Id);
             if (element == null)
             {
                 throw new Exception("Объект не найден");

@@ -18,7 +18,6 @@ namespace HostelProduct
     {
         public new IUnityContainer Container { get; set; }
         private readonly StaffController mainService;
-        private readonly EncryptiontController encryptionService;
         public FormEntry(StaffController mainService)
         {
             InitializeComponent();

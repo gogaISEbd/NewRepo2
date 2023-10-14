@@ -79,6 +79,13 @@ namespace HostelProduct
             }
 
         }
+        private void buttonClient_Click(object sender, EventArgs e)
+        {
+            Hide();
+            var form = Program.Container.Resolve<FormClient>();
+            form.ShowDialog();
+            Show();
+        }
     }
 
 }

@@ -89,7 +89,7 @@ namespace HostelProduct
                     Task1 = textBoxTask.Text,
                     Date = dateTimePicker.Value,
                     IsDone = false,
-                    StaffId = Convert.ToInt32(comboBoxStaff.SelectedValue)  
+                    StaffId = Convert.ToInt32(comboBoxStaff.SelectedValue)
                 });
                 MessageBox.Show("Услуга успешно добавлена!", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

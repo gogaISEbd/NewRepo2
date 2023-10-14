@@ -53,6 +53,7 @@
             button1.TabIndex = 1;
             button1.Text = "Клиенты компании";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += buttonClient_Click;
             // 
             // button2
             // 

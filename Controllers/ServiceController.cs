@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Models.Model;
+
 
 namespace Controllers
 {
@@ -62,12 +62,8 @@ namespace Controllers
 
         public void UpdElement(AdditionalService model)
         {
-                AdditionalService element = context.AdditionalServices.FirstOrDefault(rec => rec.Id != model.Id);
-            if (element != null)
-            {
-                throw new Exception("Такая квартира в доме уже существует");
-            }
-            element = context.AdditionalServices.FirstOrDefault(rec => rec.Id == model.Id);
+                
+            AdditionalService element = context.AdditionalServices.FirstOrDefault(rec => rec.Id == model.Id);
             if (element == null)
             {
                 throw new Exception("Объект не найден");

@@ -44,7 +44,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(340, 24);
+            menuStrip1.Size = new Size(397, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -103,7 +103,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(340, 173);
+            ClientSize = new Size(397, 202);
             Controls.Add(buttonServis);
             Controls.Add(buttonRooms);
             Controls.Add(buttonStaff);

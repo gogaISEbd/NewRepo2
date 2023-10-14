@@ -12,6 +12,7 @@ public partial class Client
     public int? Age { get; set; }
 
     public string? Passport { get; set; }
+    public string? Phone { get; set; }
 
     public virtual ICollection<AdditionalOperation> AdditionalOperations { get; } = new List<AdditionalOperation>();
 
